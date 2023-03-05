@@ -71,3 +71,37 @@ console.log(largeShirts);
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal variable and log the result
 
 console.log(ticketPriceTotal);
+
+
+
+
+
+//ANSWERS
+
+
+// Total amount donated and average donation
+const totalDonation = runners.reduce((acc, cur) => acc + cur.donation, 0);
+const avgDonation = totalDonation / runners.length;
+
+// All runners who donated more than $200
+const generousDonors = runners.filter(runner => runner.donation > 200);
+
+// Array of runner objects with a new property for company name
+const runnersWithCompany = runners.map(runner => ({ ...runner, company: runner.company_name }));
+
+
+
+let runners = [
+    { firstName: 'John', lastName: 'Doe' },
+    { firstName: 'Jane', lastName: 'Doe' },
+    { firstName: 'Bob', lastName: 'Smith' }
+  ];
+  
+  let fullName = [];
+  
+  runners.forEach(function(runner) {
+    fullName.push(runner.firstName + ' ' + runner.lastName);
+  });
+  
+  console.log(fullName);
+  

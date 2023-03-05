@@ -48,3 +48,89 @@ function removeDuplicates(array, cb) {
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 }
+
+
+
+
+
+
+
+
+
+
+
+//SOLUTIONS
+
+//Solution for getLength using a callback function
+function getLength(arr, cb) {
+return cb(arr.length);
+}
+
+//Test getLength
+getLength(items, function(length) {
+console.log(length);
+});
+
+//Expected output: 4
+
+//Solution for last using a callback function
+function last(arr, cb) {
+return cb(arr[arr.length - 1]);
+}
+
+//Test last
+last(items, function(lastItem) {
+console.log(lastItem);
+});
+
+//Expected output: "Gum"
+
+//Solution for sumNums using a callback function
+function sumNums(x, y, cb) {
+return cb(x + y);
+}
+
+//Test sumNums
+sumNums(2, 3, function(sum) {
+console.log(sum);
+});
+
+//Expected output: 5
+
+//Solution for multiplyNums using a callback function
+function multiplyNums(x, y, cb) {
+return cb(x * y);
+}
+
+//Test multiplyNums
+multiplyNums(2, 3, function(product) {
+console.log(product);
+});
+
+//Expected output: 6
+
+//Solution for contains using a callback function
+function contains(item, list, cb) {
+let result = list.includes(item);
+return cb(result);
+}
+
+//Test contains
+contains('Pencil', items, function(result) {
+console.log(result);
+});
+
+//Expected output: true
+
+//Solution for removeDuplicates using a callback function
+function removeDuplicates(array, cb) {
+let uniqueArray = [...new Set(array)];
+return cb(uniqueArray);
+}
+
+//Test removeDuplicates
+removeDuplicates([1, 2, 2, 3, 3, 3, 4, 5, 5], function(result) {
+console.log(result);
+});
+
+//Expected output: [1, 2, 3, 4, 5]
